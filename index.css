@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+    color:var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    /* margin: 10px; nhi hoga clr change issliye padding use kro */
+    padding-top: 20px;
+}
+
+.tab-container{
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    display:flex;
+    margin-top: 4rem;
+    justify-content:space-between;
+    align-items: center; 
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.tab.current-tab{
+    background-color: rgba(219,226,238,0.5);
+    border-radius: 4px;
+}
+
+.weather-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    margin-block: 4rem;
+}
+
+.btn{
+    /* button-default ko htana h to ek prop hota h all naam ka usko unset krr do*/
+    all: unset;
+    /* appearance border color 3 likhna hoga short hand m all kaam krega */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--colorDark2);
+    margin-bottom: 10px;
+}
+
+.subcontainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grantLocationContainer{
+    display: none; 
+}
+
+.grantLocationContainer.active{
+    display: flex;
+}
+
+.grantLocationContainer img{
+    margin-bottom: 2rem;
+}
+
+.grantLocationContainer p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grantLocationContainer p:last-of-type{
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+.loading-Container{
+    display:none;
+}
+
+.loading-Container.active{
+    display:flex;
+}
+
+.loading-Container p{
+    text-transform: uppercase;
+}
+
+.user-info-container{
+    display:none;
+}
+
+.user-info-container.active{
+    display:flex;
+}
+
+.user-info-container p{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+}
+
+.name{
+    display:flex;
+    align-items: center;
+    gap:0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.name p{
+    font-size: 1.5rem;
+}
+
+.name img{
+    width: 30px;
+    height: 30px;
+}
+
+.user-info-container p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+
+.parameter-container{
+    /* width:600px; */
+    width:90%;
+    display: flex;
+    gap:10px 20px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.parameter{
+    width:30%;
+    max-width:200px ;
+    background-color: rgba(219,226,238,0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0; 
+    align-items: center;
+}
+
+.parameter img{
+    width:50px;
+    height:50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.form-container{
+    display:none; 
+    width:90%;
+    max-width: 550px;
+    margin:0 auto;
+    gap:0 10px;
+    margin-bottom: 3rem;
+    /* display:flex;  */
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container.active{
+    display:flex; 
+}
+
+.form-container input{
+    all:unset;
+    width:calc(100% - 80px);
+    height:40px;
+    padding:0 20px;
+    background-color: rgba(219,226,238,0.5);
+    border-radius: 10px;
+    cursor: text;
+}
+
+.form-container input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+.form-container input:focus{
+    outline:rgba(255,255,255,0.7);
+}
+
+.form-container .btn{
+    width:40px;
+    padding:unset;
+    height:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 0.5px;
+}
+
+.error-container{
+    display:none;
+}
+
+.error-container.active{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

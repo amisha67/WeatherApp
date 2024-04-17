@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>WEATHER APP</h1>
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+        <!-- your se phle ka screen -->
+        <div class="weather-container">
+            <div class="subcontainer grantLocationContainer">
+                <img src="images\location.png" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p data-Textt>Allow Access To Get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+        
+            <!-- search bar for city -->
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search for city" data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="images\search.png" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+            <!-- loading wala -->
+            <div class="subcontainer loading-Container">
+                <img src="images\loading.gif" width="80" height="80">
+                <p>loading...</p>
+            </div>
+            <!-- content showing screen -->
+            <div class="subcontainer user-info-container">
+    
+                <!-- naming and flag -->
+                <div class="name">
+                    <p data-cityname></p>
+                    <img data-countryIcon>
+                </div>
+    
+                <!-- weather desc -->
+                <p data-weatherDesc></p>
+                <img data-weatherIcon>
+                <p data-temp></p>
+    
+                <!-- 3cards parameters -->
+                <div class="parameter-container">
+                    <div class="parameter">
+                        <img src="images\wind.png" >
+                        <p>windspeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+                    <div class="parameter">
+                        <img src="images\humidity.png" >
+                        <p>humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <div class="parameter">
+                        <img src="images\cloud.png" >
+                        <p>clouds</p>
+                        <p data-clouds></p>
+                    </div>
+                </div>
+            </div>
+            <div class="subcontainer error-container">
+                <img src="images\download.png" width="300" height="200" data-errorImg>
+                <p data-errorText></p>
+                <!-- <button class="btn" data-errorRetry>Retry</button> -->
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
